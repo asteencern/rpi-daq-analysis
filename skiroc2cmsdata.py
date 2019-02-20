@@ -77,7 +77,7 @@ class skiroc2cmsdata:
                     positions[i+1]=self.NUMBER_OF_SCA-1
                     for j in range(self.NUMBER_OF_SCA-2):
                         positions[(i+2+j)%self.NUMBER_OF_SCA]=j
-                break
+                    break
         
         return positions
 
@@ -116,32 +116,32 @@ class skiroc2cmsdata:
         lg_sca12=[0 for ch in range(self.N_CHANNELS_PER_SKIROC)]
         timesamps=self.rollPositions()
         for ch in range(self.N_CHANNELS_PER_SKIROC):
-            hg_sca0[ch] = self.ADCLow(ch,0) if timesamps[0]<9 else 0
-            hg_sca1[ch] = self.ADCLow(ch,1) if timesamps[1]<9 else 0
-            hg_sca2[ch] = self.ADCLow(ch,2) if timesamps[2]<9 else 0
-            hg_sca3[ch] = self.ADCLow(ch,3) if timesamps[3]<9 else 0
-            hg_sca4[ch] = self.ADCLow(ch,4) if timesamps[4]<9 else 0
-            hg_sca5[ch] = self.ADCLow(ch,5) if timesamps[5]<9 else 0
-            hg_sca6[ch] = self.ADCLow(ch,6) if timesamps[6]<9 else 0
-            hg_sca7[ch] = self.ADCLow(ch,7) if timesamps[7]<9 else 0
-            hg_sca8[ch] = self.ADCLow(ch,8) if timesamps[8]<9 else 0
-            hg_sca9[ch] = self.ADCLow(ch,9) if timesamps[9]<9 else 0
-            hg_sca10[ch]= self.ADCLow(ch,10) if timesamps[10]<9 else 0
-            hg_sca11[ch]= self.ADCLow(ch,11) if timesamps[11]<9 else 0
-            hg_sca12[ch]= self.ADCLow(ch,12) if timesamps[12]<9 else 0
-            lg_sca0[ch] = self.ADCLow(ch,0) if timesamps[0]<9 else 0
-            lg_sca1[ch] = self.ADCLow(ch,1) if timesamps[1]<9 else 0
-            lg_sca2[ch] = self.ADCLow(ch,2) if timesamps[2]<9 else 0
-            lg_sca3[ch] = self.ADCLow(ch,3) if timesamps[3]<9 else 0
-            lg_sca4[ch] = self.ADCLow(ch,4) if timesamps[4]<9 else 0
-            lg_sca5[ch] = self.ADCLow(ch,5) if timesamps[5]<9 else 0
-            lg_sca6[ch] = self.ADCLow(ch,6) if timesamps[6]<9 else 0
-            lg_sca7[ch] = self.ADCLow(ch,7) if timesamps[7]<9 else 0
-            lg_sca8[ch] = self.ADCLow(ch,8) if timesamps[8]<9 else 0
-            lg_sca9[ch] = self.ADCLow(ch,9) if timesamps[9]<9 else 0
-            lg_sca10[ch]= self.ADCLow(ch,10) if timesamps[10]<9 else 0
-            lg_sca11[ch]= self.ADCLow(ch,11) if timesamps[11]<9 else 0
-            lg_sca12[ch]= self.ADCLow(ch,12) if timesamps[12]<9 else 0
+            hg_sca0[ch] = self.ADCHigh(ch,0) if timesamps[0]<3 else 0
+            hg_sca1[ch] = self.ADCHigh(ch,1) if timesamps[1]<3 else 0
+            hg_sca2[ch] = self.ADCHigh(ch,2) if timesamps[2]<3 else 0
+            hg_sca3[ch] = self.ADCHigh(ch,3) if timesamps[3]<3 else 0
+            hg_sca4[ch] = self.ADCHigh(ch,4) if timesamps[4]<3 else 0
+            hg_sca5[ch] = self.ADCHigh(ch,5) if timesamps[5]<3 else 0
+            hg_sca6[ch] = self.ADCHigh(ch,6) if timesamps[6]<3 else 0
+            hg_sca7[ch] = self.ADCHigh(ch,7) if timesamps[7]<3 else 0
+            hg_sca8[ch] = self.ADCHigh(ch,8) if timesamps[8]<3 else 0
+            hg_sca9[ch] = self.ADCHigh(ch,9) if timesamps[9]<3 else 0
+            hg_sca10[ch]= self.ADCHigh(ch,10) if timesamps[10]<3 else 0
+            hg_sca11[ch]= self.ADCHigh(ch,11) if timesamps[11]<3 else 0
+            hg_sca12[ch]= self.ADCHigh(ch,12) if timesamps[12]<3 else 0
+            lg_sca0[ch] = self.ADCLow(ch,0) if timesamps[0]<3 else 0
+            lg_sca1[ch] = self.ADCLow(ch,1) if timesamps[1]<3 else 0
+            lg_sca2[ch] = self.ADCLow(ch,2) if timesamps[2]<3 else 0
+            lg_sca3[ch] = self.ADCLow(ch,3) if timesamps[3]<3 else 0
+            lg_sca4[ch] = self.ADCLow(ch,4) if timesamps[4]<3 else 0
+            lg_sca5[ch] = self.ADCLow(ch,5) if timesamps[5]<3 else 0
+            lg_sca6[ch] = self.ADCLow(ch,6) if timesamps[6]<3 else 0
+            lg_sca7[ch] = self.ADCLow(ch,7) if timesamps[7]<3 else 0
+            lg_sca8[ch] = self.ADCLow(ch,8) if timesamps[8]<3 else 0
+            lg_sca9[ch] = self.ADCLow(ch,9) if timesamps[9]<3 else 0
+            lg_sca10[ch]= self.ADCLow(ch,10) if timesamps[10]<3 else 0
+            lg_sca11[ch]= self.ADCLow(ch,11) if timesamps[11]<3 else 0
+            lg_sca12[ch]= self.ADCLow(ch,12) if timesamps[12]<3 else 0
             
         # highGains=[[self.ADCHigh(ch,sca) for sca in range(self.NUMBER_OF_SCA)] for ch in range(self.N_CHANNELS_PER_SKIROC)]
         # lowGains=[[self.ADCHigh(ch,sca) for sca in range(self.NUMBER_OF_SCA)] for ch in range(self.N_CHANNELS_PER_SKIROC)]
@@ -165,7 +165,9 @@ class skiroc2cmsdata:
         return pd.DataFrame(data=mydata)
     
     def __str__(self):
-        stream="CHIP ID = "+str(self.chipID)+",\t rollMask = "+hex(self.rollMask())
+        stream="CHIP ID = "+str(self.chipID)+",\t rollMask = "+hex(self.rollMask())+",\t rollpositions = "
+        for sca in range(self.NUMBER_OF_SCA):
+            stream=stream+str(self.rollPositions()[sca])+" "
         stream=stream+"\n \t ChannelID, LowGain*13, ToARise, ToTSlow \t HighGain*13, ToAFall, ToTFast : "
         for ch in range(self.N_CHANNELS_PER_SKIROC):
             stream=stream+"\n \t\t"+str(ch)+""

@@ -38,8 +38,8 @@ class unpacker:
                     y = (x >> 4) & 0xf
                     x = x & 0xf
                     for sk in range(4):
-                        ev[sk][i] = ev[sk][i] | (((x >> (3 - sk) ) & 1) << (14 - j*2))
-                        ev[sk][i] = ev[sk][i] | (((y >> (3 - sk) ) & 1) << (15 - j*2))
+                        ev[sk][i] = ev[sk][i] | ( ((x >> sk) & 1) << (14 - j*2) )
+                        ev[sk][i] = ev[sk][i] | ( ((y >> sk) & 1) << (15 - j*2) )
 
         for sk in range(4):
             sk2cms=skiroc2cmsdata.skiroc2cmsdata(ev[sk],sk)

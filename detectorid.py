@@ -3,7 +3,7 @@ import math as m
 class detid:
     #CHIP  CHANNEL  layer  module_IX  module_IV  IX  IV  TYPE
     def __init__(self,coord):
-        self.chip=(1-int(coord[0]))%4
+        self.chip=(4-int(coord[0])+1)%4
         self.channel=int(coord[1])
         self.layer=int(coord[2])
         self.IU=int(coord[3])
